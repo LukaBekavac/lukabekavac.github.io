@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Luka Bekavac"
 title_separator          : "-"
 name                     : &name "Luka Bekavac"
-description              : &description "PhD Candidate | Microservices & Cloud Computing"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "PhD Candidate in Computer Science at the University of St. Gallen — recommender systems, platform data access, and auditing of Very Large Online Platforms"
 url                      : https://lukabekavac.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,22 +26,22 @@ author:
   avatar           : "profile.png"
   name             : "Luka Bekavac"
   pronouns         : # example: "she/her"
-  bio              : "PhD Candidate in Informatics. Interested in Microservices Architecture and Cloud Computing."
+  bio              : "PhD Candidate in Computer Science. Researching recommender systems, platform data access, and the auditing of Very Large Online Platforms."
   location         : "Switzerland"
   employer         : "University of St. Gallen (HSG)"
   uri              : # URL
-  email            : "luka.bekavac@student.unisg.ch" 
+  email            : "luka.bekavac@unisg.ch"
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=sLRhupsAAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : # URL
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
@@ -57,7 +57,7 @@ author:
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "luka-bekavac" # Update with your LinkedIn username
+  linkedin         : "luka-bekavac-80285a1b2" # Update with your LinkedIn username
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -192,6 +192,11 @@ exclude:
   - README
   - tmp
   - vendor
+  - docker-compose.yaml
+  - markdown_generator
+  - scripts
+  - talkmap.py
+  - talkmap_out.ipynb
 keep_files:
   - .git
   - .svn
