@@ -23,7 +23,7 @@ repository               : "LukaBekavac/lukabekavac.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Luka Bekavac"
   pronouns         : # example: "she/her"
   bio              : "PhD Candidate in Computer Science. Researching recommender systems, platform data access, and the auditing of Very Large Online Platforms."

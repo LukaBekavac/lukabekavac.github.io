@@ -14,322 +14,18 @@
 <meta property="og:title" content="Luka Bekavac">
 <meta property="og:description" content="PhD candidate in Computer Science at the University of St. Gallen. Auditing the algorithms that shape what billions see.">
 <meta property="og:url" content="https://lukabekavac.github.io/">
-<meta property="og:image" content="https://lukabekavac.github.io/images/profile.png">
+<meta property="og:image" content="https://lukabekavac.github.io/images/profile.jpg">
 <meta name="twitter:card" content="summary">
 
-<style>
-:root {
-  --bg:        #ffffff;
-  --fg:        #1a1a1a;
-  --muted:     #6b6b6b;
-  --faint:     #8e8e8e;
-  --rule:      #e6e6e6;
-  --chip-bd:   #dcdcdc;
-  --chip-bg:   #fafafa;
-  --accent:    #1f5fd0;
-  --mark:      #f3f4f6;
-  --maxw:      46rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg:      #131417;
-    --fg:      #e6e6e6;
-    --muted:   #a0a0a6;
-    --faint:   #85858c;
-    --rule:    #2a2c31;
-    --chip-bd: #34363c;
-    --chip-bg: #1c1e22;
-    --accent:  #7aa7f0;
-    --mark:    #21242a;
-  }
-}
-:root[data-theme="dark"] {
-  --bg:      #131417;
-  --fg:      #e6e6e6;
-  --muted:   #a0a0a6;
-  --faint:   #85858c;
-  --rule:    #2a2c31;
-  --chip-bd: #34363c;
-  --chip-bg: #1c1e22;
-  --accent:  #7aa7f0;
-  --mark:    #21242a;
-}
-
-* { box-sizing: border-box; }
-
-html { -webkit-text-size-adjust: 100%; }
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto,
-               Helvetica, Arial, sans-serif;
-  font-size: 16.5px;
-  line-height: 1.62;
-  -webkit-font-smoothing: antialiased;
-}
-
-.wrap {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 4.5rem 16px 6rem;
-}
-
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-/* ---------- header ---------- */
-
-header {
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-  margin-bottom: 2.4rem;
-}
-
-header img {
-  width: 116px;
-  height: 116px;
-  flex: 0 0 116px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: var(--mark);
-}
-
-h1 {
-  font-size: 1.85rem;
-  font-weight: 650;
-  letter-spacing: -0.021em;
-  margin: 0 0 0.25rem;
-  line-height: 1.15;
-}
-
-.tagline {
-  margin: 0 0 0.7rem;
-  color: var(--muted);
-  font-size: 1.02rem;
-  line-height: 1.45;
-}
-
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 0.45rem;
-  font-size: 0.855rem;
-}
-
-.links a {
-  border: 1px solid var(--chip-bd);
-  background: var(--chip-bg);
-  border-radius: 999px;
-  padding: 0.16rem 0.68rem;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-.links a:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  text-decoration: none;
-}
-
-/* ---------- sections ---------- */
-
-section { margin-top: 2.9rem; }
-
-h2 {
-  font-size: 0.775rem;
-  font-weight: 650;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--faint);
-  margin: 0 0 1.15rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--rule);
-}
-
-p { margin: 0 0 0.95rem; }
-p:last-child { margin-bottom: 0; }
-
-/* ---------- news ---------- */
-
-.news { margin: 0; padding: 0; list-style: none; }
-
-.news li {
-  display: flex;
-  gap: 0.9rem;
-  margin-bottom: 0.55rem;
-  font-size: 0.955rem;
-}
-
-.news .when {
-  flex: 0 0 5.3rem;
-  color: var(--faint);
-  font-variant-numeric: tabular-nums;
-  font-size: 0.875rem;
-  padding-top: 0.08rem;
-}
-
-/* ---------- publications ---------- */
-
-.pubs { margin: 0; padding: 0; list-style: none; }
-
-.pubs > li {
-  margin-bottom: 1.75rem;
-  padding-bottom: 1.75rem;
-  border-bottom: 1px solid var(--rule);
-}
-
-.pubs > li:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-
-.pubs .title {
-  font-weight: 600;
-  display: block;
-  margin-bottom: 0.22rem;
-  line-height: 1.4;
-}
-
-.pubs .authors {
-  color: var(--muted);
-  font-size: 0.9rem;
-  display: block;
-  line-height: 1.5;
-}
-
-.pubs .authors .me { color: var(--fg); font-weight: 600; }
-
-.pubs .venue {
-  color: var(--faint);
-  font-size: 0.875rem;
-  display: block;
-  margin-top: 0.1rem;
-}
-
-.pubs .tldr {
-  margin: 0.62rem 0 0;
-  font-size: 0.925rem;
-  color: var(--muted);
-  line-height: 1.58;
-}
-
-.refs {
-  margin-top: 0.62rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  font-size: 0.79rem;
-}
-
-.refs a {
-  border: 1px solid var(--chip-bd);
-  background: var(--chip-bg);
-  border-radius: 4px;
-  padding: 0.06rem 0.44rem;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-}
-
-.refs a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
-
-/* ---------- media ---------- */
-
-.media { margin: 0; padding: 0; list-style: none; }
-
-.media li {
-  margin-bottom: 1.15rem;
-  font-size: 0.96rem;
-}
-
-.media li:last-child { margin-bottom: 0; }
-
-.media .outlet {
-  color: var(--faint);
-  font-size: 0.79rem;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  display: block;
-  margin-bottom: 0.1rem;
-}
-
-.media .note {
-  color: var(--muted);
-  font-size: 0.9rem;
-  margin: 0.14rem 0 0;
-  line-height: 1.55;
-}
-
-/* ---------- plain lists (academic info, projects) ---------- */
-
-.plain { margin: 0; padding: 0; list-style: none; }
-
-.plain li {
-  margin-bottom: 0.85rem;
-  font-size: 0.96rem;
-  line-height: 1.55;
-}
-
-.plain li:last-child { margin-bottom: 0; }
-
-.plain .sub {
-  display: block;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.plain strong { font-weight: 600; }
-
-/* ---------- footer ---------- */
-
-footer {
-  margin-top: 3.6rem;
-  padding-top: 1.1rem;
-  border-top: 1px solid var(--rule);
-  color: var(--faint);
-  font-size: 0.82rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-#theme {
-  background: none;
-  border: 0;
-  padding: 0;
-  font: inherit;
-  color: var(--faint);
-  cursor: pointer;
-}
-#theme:hover { color: var(--accent); }
-
-/* ---------- mobile ---------- */
-
-@media (max-width: 560px) {
-  .wrap { padding-top: 2.75rem; }
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.05rem;
-  }
-  header img { width: 92px; height: 92px; flex-basis: 92px; }
-  h1 { font-size: 1.62rem; }
-  .news li { flex-direction: column; gap: 0.1rem; }
-  .news .when { flex-basis: auto; }
-}
-</style>
+<link rel="stylesheet" href="/style.css">
+<script src="/theme.js"></script>
 </head>
 
 <body>
 <div class="wrap">
 
-<header>
-  <img src="/images/profile.png" alt="Luka Bekavac" width="116" height="116">
+<header class="id">
+  <img src="/images/profile.jpg" alt="Luka Bekavac" width="116" height="116">
   <div>
     <h1>Luka Bekavac</h1>
     <p class="tagline">Auditing the algorithms that shape what billions see.</p>
@@ -342,9 +38,22 @@ footer {
   </div>
 </header>
 
+<nav class="nav" aria-label="Sections">
+  <ul>
+    <li><a href="#news">News</a></li>
+    <li><a href="#papers">Papers</a></li>
+    <li><a href="#talks">Talks</a></li>
+    <li><a href="#readings">Readings</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#media">Media</a></li>
+    <li><a href="#academic">About</a></li>
+  </ul>
+</nav>
+
 <section id="about">
   <p>I am a PhD candidate in Computer Science at the <a href="https://www.unisg.ch">University of St. Gallen</a>, in the
-  <a href="https://ics.unisg.ch/chair-interactions-mayer/">Interactions group</a> led by Prof. Dr. Simon Mayer.</p>
+  <a href="https://ics.unisg.ch/chair-interactions-mayer/">Interactions group</a> led by Prof. Dr. Simon Mayer, and a
+  member of the <a href="https://www.legaldesignandcodelab.org/home">Legal Design &amp; Code Lab</a>.</p>
 
   <p>I focus on understanding and addressing the systemic risks posed by Very Large Online Platforms. I combine methods
   from computer science, technology law, and the social sciences to study how platforms' personalized recommender systems
@@ -355,23 +64,56 @@ footer {
 
 <section id="news">
   <h2>News</h2>
-  <ul class="news">
-    <li><span class="when">Sep 2026</span><span>Attending <a href="https://recsys.acm.org/">ACM RecSys 2026</a>, 27 September – 2 October.</span></li>
-    <li><span class="when">Jul 2026</span><span>Wrote in <em>Tech Policy Press</em> on what X's DSA corrective action does and doesn't fix for researcher data access.</span></li>
-    <li><span class="when">May 2026</span><span>Spoke at <a href="https://www.cpdpconferences.org/">CPDP</a> (Computers, Privacy &amp; Data Protection), 19–22 May.</span></li>
-    <li><span class="when">2026</span><span>Paper at <strong>ACM FAccT 2026</strong> auditing what Meta and TikTok research APIs actually return.</span></li>
-    <li><span class="when">2026</span><span><strong>SOAP</strong> published in <em>ACM Transactions on Recommender Systems</em>.</span></li>
+  <ul class="dated">
+    <li>
+      <span class="when">Nov 2026</span>
+      <span class="what">Presenting at the <a href="https://www.arcom.fr/en/your-services-by-media/public-consultations/call-papers-fifth-arcom-study-day">5th Arcom Study Day</a> in Paris, hosted by France's Digital Services Coordinator.<span class="upcoming">Upcoming</span></span>
+    </li>
+    <li>
+      <span class="when">Sep 2026</span>
+      <span class="what">New preprint: <a href="https://arxiv.org/abs/2609.38571"><em>Drowning in AI Slop</em></a>, auditing how Instagram, TikTok, X and YouTube label AI and deepfake content under EU law.</span>
+    </li>
+    <li>
+      <span class="when">Sep 2026</span>
+      <span class="what">At <a href="https://recsys.acm.org/">ACM RecSys 2026</a>, 27 September – 2 October.</span>
+    </li>
+    <li>
+      <span class="when">Jul 2026</span>
+      <span class="what">Wrote in <a href="https://www.techpolicy.press/what-xs-corrected-action-under-the-dsa-fixes-on-data-access-and-whats-left-open/"><em>Tech Policy Press</em></a> on what X's DSA corrective action does and doesn't fix for researcher data access.</span>
+    </li>
+    <li>
+      <span class="when">Jun 2026</span>
+      <span class="what">Paper at <a href="https://facctconference.org/2026/">ACM FAccT 2026</a> in Montréal, auditing what Meta and TikTok research APIs actually return.</span>
+    </li>
+    <li>
+      <span class="when">May 2026</span>
+      <span class="what">Spoke at <a href="https://www.cpdpconferences.org/">CPDP</a> (Computers, Privacy &amp; Data Protection), 19–22 May.</span>
+    </li>
   </ul>
 </section>
 
-<section id="publications">
-  <h2>Publications</h2>
+<section id="papers">
+  <h2>Papers <a class="more" href="https://scholar.google.com/citations?user=sLRhupsAAAAJ">Google Scholar →</a></h2>
   <ul class="pubs">
+
+    <li>
+      <span class="title">Drowning in AI Slop: How Social Media Platforms (Do Not) Label AI and Deepfake Content under EU Law</span>
+      <span class="authors">B. Rijsbosch, <span class="me">L. Bekavac</span>, H. Tari, G. van Dijck, K. Kollnig</span>
+      <span class="venue">arXiv preprint, 2026</span>
+      <p class="tldr">A systematic audit of how Instagram, TikTok, X and YouTube actually label AI-generated content,
+      across more than 10,000 posts plus controlled uploads of AI material. Labelling is now broadly established but
+      badly incomplete: only 33% of expert-identified deepfakes in high-risk contexts carried a platform-applied label,
+      and platforms labelled just 61% of the controlled uploads, with policies, label designs and detection methods
+      diverging sharply between them.</p>
+      <div class="refs">
+        <a href="https://arxiv.org/abs/2609.38571">arXiv</a>
+      </div>
+    </li>
 
     <li>
       <span class="title">Scrutinizing Systemic Risks in Personalized Recommender Systems Through Sock-Puppet Auditing of VLOPs</span>
       <span class="authors"><span class="me">L. Bekavac</span>, J. Strecker-Bischoff, K. Garcia, S. Mayer, A. Tamò-Larrieux</span>
-      <span class="venue">ACM Transactions on Recommender Systems, 2026</span>
+      <span class="venue"><a href="https://dl.acm.org/journal/tors">ACM Transactions on Recommender Systems</a>, 2026</span>
       <p class="tldr">Introduces SOAP, an open-source sock-puppet auditing framework that reaches the user-level granularity
       platform data access does not provide. Applied to TikTok during the 2024 German regional elections, it found that
       politically neutral accounts were three to four times more likely to be shown right-wing populist content than
@@ -386,7 +128,7 @@ footer {
     <li>
       <span class="title">Platforms' Research API Data Access: What Users See vs. What Researchers Can Retrieve</span>
       <span class="authors"><span class="me">L. Bekavac</span>, S. Mayer</span>
-      <span class="venue">ACM Conference on Fairness, Accountability, and Transparency (FAccT), 2026</span>
+      <span class="venue"><a href="https://facctconference.org/">ACM Conference on Fairness, Accountability, and Transparency (FAccT)</a>, 2026</span>
       <p class="tldr">Compares what the TikTok Research API and Meta Content Library return against what is actually
       publicly visible on those platforms, using controlled accounts during election periods. Three classes of
       platform-imposed loss emerge — scope narrowing, metadata stripping, and operational restriction — removing roughly
@@ -401,7 +143,7 @@ footer {
     <li>
       <span class="title">Broken Links and Fading Stories: How Dominant Online Platforms Subvert the Hypermedia Foundation of the Web</span>
       <span class="authors"><span class="me">L. Bekavac</span>, S. Mayer</span>
-      <span class="venue">18th ACM Web Science Conference (WebSci), 2026</span>
+      <span class="venue">18th ACM Web Science Conference (WebSci), Braunschweig, 2026</span>
       <p class="tldr">The Web was envisioned as an open, decentralized network of documents joined by hyperlinks.
       Dominant platforms depart from that architecture — constraining linking, limiting navigation, and normalizing
       ephemerality — turning an open hypermedia environment into platform-governed silos. Users answer with
@@ -415,7 +157,7 @@ footer {
     <li>
       <span class="title">From Data Portability to Data Control: Making Regulation Technically Real</span>
       <span class="authors"><span class="me">L. Bekavac</span></span>
-      <span class="venue">Poster, 4th Solid Symposium, London, 2026</span>
+      <span class="venue">Poster, <a href="https://theodi.org/news-and-events/news/announcing-the-solid-symposium-2026/">4th Solid Symposium</a>, London, 2026</span>
       <p class="tldr">GDPR Art. 20 and DMA Art. 6(9) mandate social media data portability, but platform exports arrive
       as proprietary dumps with no semantic structure — technically compliant, practically useless for switching.
       Presents an end-to-end pipeline that uses LLM-assisted RDF conversion to turn those exports into structured linked
@@ -468,7 +210,7 @@ footer {
     <li>
       <span class="title">Visualizing Children's Filter Bubbles: A Digital Window for Bridging Social Media Experiences</span>
       <span class="authors"><span class="me">L. Bekavac</span>, L. Bekavac, B. Bekavac</span>
-      <span class="venue">MIPRO 2025 — 48th ICT and Electronics Convention, Opatija</span>
+      <span class="venue"><a href="https://mipro.hr/">MIPRO 2025</a> — 48th ICT and Electronics Convention, Opatija</span>
       <p class="tldr">Children are still forming their critical thinking, so the filter bubbles that recommender systems
       build around them shape worldviews in ways parents rarely see. Uses SOAP to steer and replicate the feeds children
       actually experience, then presents an interactive interface that visualizes those bubbles for parents. The aim is
@@ -496,7 +238,7 @@ footer {
     <li>
       <span class="title">From Walls to Windows: Creating Transparency to Understand Filter Bubbles in Social Media</span>
       <span class="authors"><span class="me">L. Bekavac</span>, K. Garcia, J. Strecker-Bischoff, S. Mayer, A. Tamò-Larrieux</span>
-      <span class="venue">NORMalize 2024 — 2nd Workshop on the Normative Design and Evaluation of Recommender Systems, at ACM RecSys 2024</span>
+      <span class="venue">NORMalize 2024 — 2nd Workshop on the Normative Design and Evaluation of Recommender Systems, at <a href="https://recsys.acm.org/recsys24/">ACM RecSys 2024</a></span>
       <p class="tldr">Filter bubbles have been hard to study at scale despite years of research. Introduces SOAP, which
       takes a topic prompt and uses a multimodal LLM to create and navigate filter bubbles inside a real feed, logging
       what it sees. Across three induced bubbles, topic diversity collapsed in as little as 60 minutes of scrolling.</p>
@@ -522,6 +264,83 @@ footer {
   </ul>
 </section>
 
+<section id="talks">
+  <h2>Talks <a class="more" href="/talks/">All talks →</a></h2>
+  <ul class="dated roomy">
+    <li>
+      <span class="when">Nov 2026</span>
+      <span class="what">
+        <a href="https://www.arcom.fr/en/your-services-by-media/public-consultations/call-papers-fifth-arcom-study-day">5th Arcom Study Day</a>, Paris<span class="upcoming">Upcoming</span>
+        <span class="sub">Accepted for presentation at the study day of France's Digital Services Coordinator, held with ENS Paris-Saclay.</span>
+      </span>
+    </li>
+    <li>
+      <span class="when">Jun 2026</span>
+      <span class="what">
+        <a href="https://facctconference.org/2026/">ACM FAccT 2026</a>, Montréal
+        <span class="sub"><em>Platforms' Research API Data Access: What Users See vs. What Researchers Can Retrieve</em>. 25–28 June 2026.</span>
+      </span>
+    </li>
+    <li>
+      <span class="when">May 2026</span>
+      <span class="what">
+        <a href="https://www.cpdpconferences.org/">CPDP</a> — Computers, Privacy &amp; Data Protection, Brussels
+        <span class="sub">19–22 May 2026.</span>
+      </span>
+    </li>
+  </ul>
+</section>
+
+<section id="readings">
+  <h2>Recommended Readings</h2>
+  <p>Work that shaped how I think about platforms, and that I keep sending to people who ask where to start.</p>
+  <ul class="readings">
+    <li>
+      <a href="https://www.penguinrandomhouse.com/books/311244/the-filter-bubble-by-eli-pariser/">The Filter Bubble</a>
+      <span class="who">— Eli Pariser, 2011</span>
+      <span class="why">Named the problem a decade before anyone could measure it. Worth reading now to see how much of
+      it was right, and which parts only hold under specific conditions.</span>
+    </li>
+    <li>
+      <a href="https://social.cs.uiuc.edu/papers/pdfs/ICA2014-Sandvig.pdf">Auditing Algorithms: Research Methods for Detecting Discrimination on Internet Platforms</a>
+      <span class="who">— Christian Sandvig, Kevin Hamilton, Karrie Karahalios, Cedric Langbort, 2014</span>
+      <span class="why">The paper that laid out sock-puppet auditing as a method. Almost everything I build is a
+      descendant of the designs sketched here.</span>
+    </li>
+    <li>
+      <a href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj">Regulation (EU) 2022/2065 — the Digital Services Act</a>
+      <span class="who">— European Parliament and Council, 2022</span>
+      <span class="why">Read the actual text, not the summaries. Articles 34, 35 and 40 are where systemic risk and
+      researcher data access are defined, and the gap between what they promise and what platforms ship is most of my
+      research.</span>
+    </li>
+    <li>
+      <a href="https://yalebooks.yale.edu/book/9780300261431/custodians-of-the-internet/">Custodians of the Internet</a>
+      <span class="who">— Tarleton Gillespie, 2018</span>
+      <span class="why">Moderation as the product rather than an afterthought. The best antidote to thinking of
+      platforms as neutral pipes.</span>
+    </li>
+    <li>
+      <a href="https://journals.sagepub.com/doi/10.1177/1359183518820366">Captivating Algorithms: Recommender Systems as Traps</a>
+      <span class="who">— Nick Seaver, 2019</span>
+      <span class="why">Reframes recommenders as devices for capture rather than for matching preferences. Changes what
+      you think an audit should even be measuring.</span>
+    </li>
+    <li>
+      <a href="https://www.w3.org/History/1989/proposal.html">Information Management: A Proposal</a>
+      <span class="who">— Tim Berners-Lee, 1989</span>
+      <span class="why">Three pages that describe the Web we were supposed to get. Useful as a baseline for how far
+      platform architectures have drifted from it.</span>
+    </li>
+    <li>
+      <a href="https://ics.uci.edu/~fielding/pubs/dissertation/top.htm">Architectural Styles and the Design of Network-based Software Architectures</a>
+      <span class="who">— Roy T. Fielding, 2000</span>
+      <span class="why">Where REST comes from, and a careful argument about why the Web's constraints were chosen.
+      Background for why link rot and closed silos are architectural failures, not accidents.</span>
+    </li>
+  </ul>
+</section>
+
 <section id="projects">
   <h2>Projects</h2>
   <ul class="plain">
@@ -531,6 +350,13 @@ footer {
       <span class="sub">Open-source framework for running controlled sock-puppet accounts against platform recommenders,
       built to make systemic-risk audits reproducible under the DSA. Also used as a teaching tool: in a workshop with
       over 100 participants it measurably raised algorithmic literacy.</span>
+    </li>
+    <li>
+      <strong><a href="https://github.com/Interactions-HSG/BridgingWorlds">BridgingWorlds</a></strong> — turning platform
+      data exports into linked data.
+      <span class="sub">Pipeline that converts the proprietary dumps platforms hand over under GDPR Art. 20 and DMA
+      Art. 6(9) into structured RDF held in user-controlled Solid Pods, so data portability becomes something you can
+      actually switch with.</span>
     </li>
   </ul>
 </section>
@@ -570,26 +396,34 @@ footer {
   <h2>Academic Info</h2>
   <ul class="plain">
     <li>
-      <strong>PhD in Computer Science</strong>, University of St. Gallen (HSG) — since 2025
-      <span class="sub">Interactions group, advised by Prof. Dr. Simon Mayer. Recommender systems, platform data access,
-      and the auditing of Very Large Online Platforms.</span>
+      <strong>PhD in Computer Science</strong>, <a href="https://www.unisg.ch">University of St. Gallen (HSG)</a> — since 2025
+      <span class="sub"><a href="https://ics.unisg.ch/chair-interactions-mayer/">Interactions group</a>, advised by
+      Prof. Dr. Simon Mayer. Recommender systems, platform data access, and the auditing of Very Large Online Platforms.</span>
     </li>
     <li>
-      <strong>M.Sc. in Computer Science</strong>, University of St. Gallen (HSG)
+      <strong>M.Sc. in Computer Science</strong>, <a href="https://www.unisg.ch">University of St. Gallen (HSG)</a>
     </li>
     <li>
-      <strong>B.Sc. in Business Information Systems</strong>, Furtwangen University (HFU), Germany
+      <strong>B.Sc. in Business Information Systems</strong>, <a href="https://www.hs-furtwangen.de/en/">Furtwangen University (HFU)</a>, Germany
     </li>
   </ul>
 
   <ul class="plain" style="margin-top:1.5rem">
     <li>
+      <strong>Mentorship</strong>
+      <span class="sub">
+        Mentee, <a href="https://alltechishuman.org/">All Tech Is Human</a> Responsible Tech Mentorship Program ·
+        Mentee, <a href="https://home-affairs.ec.europa.eu/news/mentoring-next-generation-pcve-practitioners-policy-makers-and-researchers-2025-01-22_en">EU Knowledge Hub</a>
+        mentoring programme for the next generation of P/CVE practitioners, policymakers and researchers
+      </span>
+    </li>
+    <li>
       <strong>Affiliations</strong>
       <span class="sub">
         <a href="https://ics.unisg.ch/chair-interactions-mayer/">Interactions Group</a>, Institute of Computer Science, HSG ·
-        <a href="https://www.legaldesignandcodelab.org/">Legal Design &amp; Code Lab</a> (CoCoDa, SNSF-funded) ·
+        <a href="https://www.legaldesignandcodelab.org/home">Legal Design &amp; Code Lab</a> (CoCoDa, SNSF-funded) ·
         <a href="https://ai.ethz.ch/">ETH AI Center</a>, Zurich ·
-        PCVE EU Knowledge Hub ·
+        <a href="https://home-affairs.ec.europa.eu/networks/eu-knowledge-hub-prevention-radicalisation_en">PCVE EU Knowledge Hub</a> ·
         Future Society (FUSO), HSG
       </span>
     </li>
@@ -602,22 +436,5 @@ footer {
 </footer>
 
 </div>
-
-<script>
-(function () {
-  var root = document.documentElement, btn = document.getElementById('theme'), KEY = 'theme';
-  try {
-    var saved = localStorage.getItem(KEY);
-    if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
-  } catch (e) {}
-  btn.addEventListener('click', function () {
-    var dark = getComputedStyle(root).getPropertyValue('--bg').trim() !== '#ffffff';
-    var next = dark ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try { localStorage.setItem(KEY, next); } catch (e) {}
-  });
-})();
-</script>
-
 </body>
 </html>
