@@ -11,7 +11,7 @@ Hand-written static HTML. No build step, no framework, no external fonts or scri
 | `index.html` | The main page: intro, News, Papers, Talks (latest 3), Recommended Readings, Projects, Media & Features, Academic Info |
 | `talks/index.html` | Full talks archive, served at `/talks/` |
 | `style.css` | Shared stylesheet for both pages |
-| `theme.js` | Light/dark toggle, remembers the choice in `localStorage` |
+| `site.js` | Light/dark toggle (remembered in `localStorage`) and self-expiring elements |
 | `images/profile.jpg` | Profile photo, square, 720×720 |
 
 The repository still carries the [Academic Pages](https://github.com/academicpages/academicpages.github.io)
@@ -24,8 +24,15 @@ serves `/404.html` and the Atom feed. `_config.yml` remains the source of site m
   your own name in `<span class="me">`, put the 2–3 sentence summary in `<p class="tldr">`,
   and the links in `<div class="refs">` as `DOI` / `arXiv` / `PDF` / `Code`.
 - **Add a news item** — an `<li>` in `<ul class="dated">` under `#news`, date in
-  `<span class="when">`, body in `<span class="what">`. Add `<span class="upcoming">Upcoming</span>`
-  for something that hasn't happened yet.
+  `<span class="when">`, body in `<span class="what">`. For something that hasn't happened yet,
+  add `<span class="upcoming" data-until="2026-11">Upcoming</span>` (see below).
+- **"Upcoming" badges expire by themselves** — any element carrying `data-until` is removed
+  once that date has passed, so a badge never claims an event is still ahead. Use `YYYY-MM`
+  when you only know the month (it disappears after the last day of that month) or
+  `YYYY-MM-DD` for an exact date (it disappears after that day). Dates are read in the
+  visitor's local time, and a value that isn't in one of those two shapes is left alone rather
+  than hidden. Because the badge disappears on its own, write the surrounding sentence so it
+  reads correctly either way — "Talk at the 5th Arcom Study Day", not "Presenting at".
 - **Add a talk** — add it to `talks/index.html`, newest first. If it is one of the three most
   recent, also add it to the Talks preview in `index.html` and drop the oldest one there.
 - **Add a reading** — an `<li>` in `<ul class="readings">`: linked title, `<span class="who">`
