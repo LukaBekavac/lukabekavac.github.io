@@ -299,6 +299,52 @@ p:last-child { margin-bottom: 0; }
 
 .refs a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
+/* ---------- categorised groups (current projects) ---------- */
+
+.cat { margin-bottom: 1.7rem; }
+.cat:last-child { margin-bottom: 0; }
+
+.cat h3 {
+  font-size: 0.775rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0 0 0.65rem;
+}
+
+/* ---------- collapsed papers ---------- */
+
+.morepubs { margin-top: 1.75rem; }
+
+.morepubs > summary {
+  display: inline-block;
+  cursor: pointer;
+  list-style: none;
+  border: 1px solid var(--chip-bd);
+  background: var(--chip-bg);
+  border-radius: 999px;
+  padding: 0.22rem 0.85rem;
+  font-size: 0.855rem;
+  color: var(--muted);
+}
+
+.morepubs > summary::-webkit-details-marker { display: none; }
+.morepubs > summary::after { content: " ↓"; }
+
+.morepubs > summary:hover { border-color: var(--accent); color: var(--accent); }
+
+.morepubs > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.morepubs[open] > summary { margin-bottom: 1.75rem; }
+.morepubs[open] > summary::after { content: " ↑"; }
+
+.morepubs[open] > summary .lbl-shut,
+.morepubs:not([open]) > summary .lbl-open { display: none; }
+
 /* ---------- readings ---------- */
 
 .readings { margin: 0; padding: 0; list-style: none; }
@@ -370,6 +416,102 @@ p:last-child { margin-bottom: 0; }
 }
 
 .plain strong { font-weight: 600; }
+
+/* ---------- affiliations ---------- */
+
+.affs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13.5rem, 1fr));
+  gap: 0.8rem;
+}
+
+.aff {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: 100%;
+  padding: 0.85rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  color: inherit;
+}
+
+.aff:hover { border-color: var(--accent); text-decoration: none; }
+.aff:hover .affname { color: var(--accent); }
+
+/* Logos sit on a white plate so dark-on-transparent marks and marks with a
+   baked-in white background both stay legible in either theme. */
+.plate {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0.3rem 0.5rem;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.07);
+}
+
+.plate img {
+  display: block;
+  max-height: 28px;
+  max-width: 100%;
+  width: auto;
+}
+
+.plate .initials {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #5a5a5a;
+}
+
+.affname {
+  font-weight: 600;
+  font-size: 0.915rem;
+  line-height: 1.35;
+}
+
+.affrole {
+  color: var(--muted);
+  font-size: 0.845rem;
+  line-height: 1.4;
+  margin-top: -0.25rem;
+}
+
+/* ---------- affiliation tags on papers and projects ----------
+   Not applied anywhere yet — see the README for how to attach one. */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.55rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  border: 1px solid var(--chip-bd);
+  background: var(--chip-bg);
+  border-radius: 999px;
+  padding: 0.1rem 0.52rem;
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+
+.tag:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+.tag img {
+  height: 13px;
+  width: auto;
+  background: #fff;
+  border-radius: 2px;
+  padding: 1px 2px;
+}
 
 /* ---------- footer ---------- */
 

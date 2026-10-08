@@ -13,6 +13,7 @@ Hand-written static HTML. No build step, no framework, no external fonts or scri
 | `style.css` | Shared stylesheet for both pages |
 | `site.js` | Light/dark toggle (remembered in `localStorage`) and self-expiring elements |
 | `images/profile.jpg` | Profile photo, square, 720×720 |
+| `images/logos/` | Affiliation logos, trimmed of padding and sized to 80px tall |
 
 The repository still carries the [Academic Pages](https://github.com/academicpages/academicpages.github.io)
 Jekyll theme it was forked from. That machinery is no longer used by either page; it only
@@ -22,7 +23,19 @@ serves `/404.html` and the Atom feed. `_config.yml` remains the source of site m
 
 - **Add a paper** — copy an existing `<li>` inside `<ul class="pubs">` in `index.html`. Wrap
   your own name in `<span class="me">`, put the 2–3 sentence summary in `<p class="tldr">`,
-  and the links in `<div class="refs">` as `DOI` / `arXiv` / `PDF` / `Code`.
+  and the links in `<div class="refs">` as `DOI` / `arXiv` / `PDF` / `Code`. Only the newest
+  three sit outside `<details class="morepubs">`; adding a newer one means moving the oldest
+  of those three inside, and bumping the count in the summary text.
+- **Add an affiliation** — an `<li>` in `<ul class="affs">` under `#affiliations`, holding one
+  `<a class="aff">` with three children: a `<span class="plate">` (the logo `<img>`, or a
+  `<span class="initials">` when there is no logo), a `<span class="affname">` and a
+  `<span class="affrole">`. The plate is always white in both themes, so dark-on-transparent
+  logos and logos with a baked-in white background both stay legible.
+- **Tag a paper or project with an affiliation** — the markup exists but nothing uses it yet.
+  Add, as the last child of the item, `<div class="tags">` containing one
+  `<a class="tag" href="#affiliations"><img src="/images/logos/<name>.png" alt="">Short name</a>`
+  per affiliation. The logo is optional; the text label carries the meaning, so an affiliation
+  with no logo still works.
 - **Add a news item** — an `<li>` in `<ul class="dated">` under `#news`, date in
   `<span class="when">`, body in `<span class="what">`. For something that hasn't happened yet,
   add `<span class="upcoming" data-until="2026-11">Upcoming</span>` (see below).
