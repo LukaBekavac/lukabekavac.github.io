@@ -52,8 +52,46 @@
     }
   }
 
+  /* ---------- collapsible lists ----------
+     A list carrying data-collapse="N" shows its first N items and grows a
+     toggle for the rest. The count is read from the DOM, so adding or removing
+     an item needs no other edit. Without JavaScript every item stays visible,
+     which errs towards showing too much rather than hiding content. */
+
+  function collapse(list, index) {
+    var keep = parseInt(list.getAttribute('data-collapse'), 10);
+    if (!(keep > 0)) return;
+
+    var items = [];
+    for (var i = 0; i < list.children.length; i++) {
+      if (list.children[i].tagName === 'LI') items.push(list.children[i]);
+    }
+    var extra = items.slice(keep);
+    if (!extra.length) return;
+
+    if (!list.id) list.id = 'collapsible-' + index;
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'morebtn';
+    btn.setAttribute('aria-controls', list.id);
+    var open = false;
+
+    function render() {
+      for (var i = 0; i < extra.length; i++) extra[i].hidden = !open;
+      btn.textContent = open ? 'Show fewer' : 'Show ' + extra.length + ' more';
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    btn.addEventListener('click', function () { open = !open; render(); });
+    render();
+    list.parentNode.insertBefore(btn, list.nextSibling);
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     wireThemeToggle();
     dropExpired();
+    var lists = document.querySelectorAll('[data-collapse]');
+    for (var i = 0; i < lists.length; i++) collapse(lists[i], i);
   });
 })();

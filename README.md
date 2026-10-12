@@ -11,7 +11,7 @@ Hand-written static HTML. No build step, no framework, no external fonts or scri
 | `index.html` | The main page: intro, News, Papers, Talks (latest 3), Recommended Readings, Projects, Media & Features, Academic Info |
 | `talks/index.html` | Full talks archive, served at `/talks/` |
 | `style.css` | Shared stylesheet for both pages |
-| `site.js` | Light/dark toggle (remembered in `localStorage`) and self-expiring elements |
+| `site.js` | Light/dark toggle (remembered in `localStorage`), self-expiring elements, collapsible lists |
 | `images/profile.jpg` | Profile photo, square, 720×720 |
 | `images/logos/` | Affiliation logos, trimmed of padding and sized to 80px tall |
 
@@ -23,9 +23,14 @@ serves `/404.html` and the Atom feed. `_config.yml` remains the source of site m
 
 - **Add a paper** — copy an existing `<li>` inside `<ul class="pubs">` in `index.html`. Wrap
   your own name in `<span class="me">`, put the 2–3 sentence summary in `<p class="tldr">`,
-  and the links in `<div class="refs">` as `DOI` / `arXiv` / `PDF` / `Code`. Only the newest
-  three sit outside `<details class="morepubs">`; adding a newer one means moving the oldest
-  of those three inside, and bumping the count in the summary text.
+  and the links in `<div class="refs">` as `DOI` / `arXiv` / `PDF` / `Code`. Put it in the
+  order you want it read; only the first three show until the reader expands the list.
+- **Long lists collapse themselves** — a list carrying `data-collapse="3"` shows its first
+  three `<li>` items and grows a "Show N more" button for the rest. The count is read from
+  the DOM, so adding or removing an item needs no other edit, and the button disappears on
+  its own once a list is down to three items or fewer. Without JavaScript every item stays
+  visible, which errs towards showing too much rather than hiding content. To collapse a new
+  list, add the attribute; to stop one collapsing, remove it.
 - **Add an affiliation** — an `<li>` in `<ul class="affs">` under `#affiliations`, holding one
   `<a class="aff">` with three children: a `<span class="plate">` (the logo `<img>`, or a
   `<span class="initials">` when there is no logo), a `<span class="affname">` and a
