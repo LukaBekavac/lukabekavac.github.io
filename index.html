@@ -60,7 +60,7 @@
   two tracks. The first shows how far platform-provided data access falls short of what independent scrutiny requires,
   measuring the gap between what users see and what Article 40 research APIs actually return. The second builds the
   methods that close it, from sock-puppet auditing with <a href="https://github.com/Interactions-HSG/SOAP">SOAP</a>, my
-  open-source framework, through to code-level audits of recommendation pipelines.</p>
+  open-source framework, through to <a href="https://arxiv.org/abs/2611.16800">code-level audits</a> of recommendation pipelines.</p>
 
   <p>I am also interested in whether more decentralized and open architectures can address these risks at the root of
   platform design rather than after the fact — through data portability under the DMA, user-controlled Solid Pods, and
@@ -173,6 +173,10 @@
       <span class="what">Guest lecture and workshop at the <a href="https://www.zhaw.ch/de/sozialearbeit">ZHAW School of Social Work</a> on filter bubbles and what they mean for social work practice.</span>
     </li>
     <li>
+      <span class="when">Nov 2026</span>
+      <span class="what">New preprint: <a href="https://arxiv.org/abs/2611.16800"><em>A Code-Level Audit of X</em></a>, testing whether X's open-sourced recommender code actually supports a third-party audit.</span>
+    </li>
+    <li>
       <span class="when">Sep 2026</span>
       <span class="what">New preprint: <a href="https://arxiv.org/abs/2609.38571"><em>Drowning in AI Slop</em></a>, auditing how Instagram, TikTok, X and YouTube label AI and deepfake content under EU law.</span>
     </li>
@@ -198,6 +202,21 @@
 <section id="papers">
   <h2>Papers <a class="more" href="https://scholar.google.com/citations?user=sLRhupsAAAAJ">Google Scholar →</a></h2>
   <ul class="pubs" data-collapse="3">
+
+    <li>
+      <span class="title">A Code-Level Audit of X</span>
+      <span class="authors"><span class="me">L. Bekavac</span>, S. Mayer</span>
+      <span class="venue">arXiv preprint, 2026 (under review)</span>
+      <p class="tldr">The DSA pushes platforms to disclose their recommendation pipelines, but it is unknown whether a
+      code release actually supports a third-party audit. Proposes a code-level audit method that walks back from the
+      served timeline to every upstream component, checks it is reachable, and grades how inspectable it is, then applies
+      it to X's open-sourced recommender. It finds 13 transparency dead-ends on the live serving path, with the components
+      that decide filtering and ranking among the least inspectable, a pattern deepened by the 2025 integration of Grok
+      into moderation, annotation and ranking.</p>
+      <div class="refs">
+        <a href="https://arxiv.org/abs/2611.16800">arXiv</a>
+      </div>
+    </li>
 
     <li>
       <span class="title">Drowning in AI Slop: How Social Media Platforms (Do Not) Label AI and Deepfake Content under EU Law</span>
@@ -374,7 +393,7 @@
       <span class="when">Nov 2026</span>
       <span class="what">
         <a href="https://algorithmic-transparency.ec.europa.eu/events/ecat-research-workshop-2026-2026-11-25_en">ECAT Research Workshop 2026</a>, Seville<span class="upcoming" data-until="2026-11-25">Upcoming</span>
-        <span class="sub">Two abstracts accepted at the European Commission's Centre for Algorithmic Transparency, on DSA transparency for cyber violence against women and on a code-level audit of X's recommendation pipeline.</span>
+        <span class="sub">Two abstracts accepted at the European Commission's Centre for Algorithmic Transparency, on DSA transparency for cyber violence against women and on a <a href="https://arxiv.org/abs/2611.16800">code-level audit of X's recommendation pipeline</a>.</span>
       </span>
     </li>
     <li>
