@@ -299,6 +299,13 @@ p:last-child { margin-bottom: 0; }
 
 .refs a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
+/* \FE0E keeps the play triangle as a text glyph rather than a colour emoji. */
+.refs a.video::before {
+  content: "\25B6\FE0E";
+  font-size: 0.8em;
+  margin-right: 0.32em;
+}
+
 /* ---------- categorised groups (current projects) ---------- */
 
 .cat { margin-bottom: 1.7rem; }
